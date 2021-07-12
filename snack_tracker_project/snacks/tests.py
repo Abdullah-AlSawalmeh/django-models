@@ -6,6 +6,6 @@ class test_Snack_page(TestCase):
         self.assertEqual(self.client.get(reverse('index')).status_code, 200)
 
     def test_template_used(self):
-        self.assertEqual(self.client.get(reverse('snacks_list')).templates[0].name ,'snacks_list.html')
+        self.assertEqual(self.client.get(reverse('snacks_list')).templates[0].name ,'snack_list.html')
 
         self.assertEqual(self.client.get(reverse('snacks_list')).templates[1].name ,'base.html')
